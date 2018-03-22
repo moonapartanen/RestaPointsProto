@@ -151,9 +151,26 @@ a#maplink{
 	font-family: 'Ubuntu', sans-serif;
 }
 
+
 /*--------------------------------------------------------------------*/
 
 #meisseli {										/*YLLÄPITOSIVUN LINKKI*/
 	color: white;
  }
+ 
+ /*--------------------------------------------------------------------*/
+ 
+												/*SLOT*/
+ .container {
+	margin:0 auto;
+	width:266px;
+}
+.slot {
+	background:url("images/reel_normal.png") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+	width:65px;
+	height:70px;
+	float:left;
+	border:1px solid #000;
+	background-position:0 4px;
+}
 
