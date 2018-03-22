@@ -6,30 +6,16 @@ var etumaa = [];
 var map;
 
 $(document).ready(function(){
-	$.ajax({
-		url: "haku.php?EtuMap=1",
-		method: "POST",
-		datatype: 'json'
-		})
-		.done(function(response) {
-			
-			var maat = JSON.parse(response);
-			
-				for(var i = 0; i < maat.maa.length; i++){
-					 maanimi = maat.maa[i].maanimi.toString();
-					 maay = maat.maa[i].maay;
-					 maax = maat.maa[i].maax;
-					 etumaa.push(['<button class=\"markerNappi\" id="'+maanimi+'" onclick = "haku(\''+maanimi+'\')">'+maanimi+'</button>',maax,maay, i+1]);
-				} 
-			FrontMap();
-		});
+
+	FrontMap();
 });
 	
 function FrontMap()
 {
+	
 	map = new google.maps.Map(document.getElementById('frontmap'), {
-		zoom: 3,
-		center: new google.maps.LatLng(57.583484,-5.099430),
+		zoom: 15,
+		center: new google.maps.LatLng(62.898997, 27.664062),
 		styles:
 		[
 			{
