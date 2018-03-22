@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Etusivu</title>
+		<title>Kartta</title>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
@@ -27,7 +27,6 @@
 			</div>
 			<div class="collapse navbar-collapse" id="menubar">
 			  <ul class="nav navbar-nav navbar-right">
-			    <li><a id="mblinkki" href="map.html">KARTTA</a></li>
 				<li><a id="mblinkki" href="#yhteyshenkilotlinkki">RAVINTOLAT</a></li>
 				<li><a id="mblinkki" href="#infoalinkki">KILPAILUT</a></li>
 				<li><a id="mblinkki" href="#rahoituslinkki">OMA PROFIILI</a></li>
@@ -37,15 +36,14 @@
 		</nav>
 		
 		<!--TERVETULOA-PALSTA-->
-		<div class="container-fluid bg-1 text-center">	
-			<h6>Tervetuloa!</h6>
-			<hr>
-			<p>Tähän QR-koodi</p>
+		<div class="container-fluid bg-2 text-center">	
+			<div id="frontmap"  name="kartta_eurooppa" ></div>
+			<br>
 		</div>
-  
+		
 		<!--FOOTER-->	
 		<footer class="container-fluid bg-5 text-center">
-			<p id="footerteksti">©Taco Production 2016 <a href="yllapito.php"><span id="meisseli" class="glyphicon glyphicon-wrench"></span></a></p>
-		</footer>
+			<p id="footerteksti">�Taco Production 2016 <a href="yllapito.php"><span id="meisseli" class="glyphicon glyphicon-wrench"></span></a></p>
+		</footer>		
 	</body>
 </html>
