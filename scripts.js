@@ -12,9 +12,10 @@ $(document).ready(function(){
 	
 function FrontMap()
 {
+	
 	map = new google.maps.Map(document.getElementById('frontmap'), {
-		zoom: 3,
-		center: new google.maps.LatLng(57.583484,-5.099430),
+		zoom: 15,
+		center: new google.maps.LatLng(62.898997, 27.664062),
 		styles:
 		[
 			{
