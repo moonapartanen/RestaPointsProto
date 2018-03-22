@@ -107,24 +107,6 @@ a:hover {
 
 /*-------------------------------------------------------------------------------*/
 
-#top-link-block.affix {	 									/* BACK-TO-TOP */
-    position: fixed; 
-    bottom: 3%;
-    right: 5%;
-}
-#nuoli {
-	background-color: #D1256E;
- 	font-size: 25px;
-	color: white;
-	padding-right: 40%;
-	padding-left: 40%;
-	padding-top: 5%;
-	padding-bottom: 10%;
-	border-radius: 4px;
-}
-
-/*-------------------------------------------------------------------------------*/
-
 																/* KARTAT */
 
 #frontmap{
@@ -138,22 +120,6 @@ a:hover {
 	max-height: 100%;
 }
 
-.markerNappi {
-	border: none;
-	background-color: white;
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: bold;
-	color: #D1256E;
-}
-a#maplink{										
-	font-size: 13px;
-	color: #D1256E;
-	font-family: 'Ubuntu', sans-serif;
-}
-
 /*--------------------------------------------------------------------*/
 
-#meisseli {										/*YLLÄPITOSIVUN LINKKI*/
-	color: white;
- }
 
