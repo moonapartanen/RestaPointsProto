@@ -1,6 +1,13 @@
+var markerDragonSheng;
+
 $(document).ready(function(){
 
 	InitializeMap();
+
+	markerDragonSheng.addListener('click', function() {
+		$("#modalDragonSheng").modal();
+	});
+
 });
 	
 function InitializeMap()
@@ -10,7 +17,7 @@ function InitializeMap()
 		center: new google.maps.LatLng(62.898997, 27.664062),
 	});
 	
-	var markerDragonSheng = new google.maps.Marker({
+	markerDragonSheng = new google.maps.Marker({
           position: new google.maps.LatLng(62.8946901, 27.676138499),
           map: map,
           title: 'Dragon Sheng'
