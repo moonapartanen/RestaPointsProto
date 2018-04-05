@@ -1,4 +1,5 @@
 var markerDragonSheng;
+var markerMountSherpa;
 
 $(document).ready(function(){
 
@@ -8,11 +9,15 @@ $(document).ready(function(){
 		$("#modalDragonSheng").modal();
 	});
 
+	markerMountSherpa.addListener('click', function() {
+		$("#modalMountSherpa").modal();
+	});
+
 });
 	
 function InitializeMap()
 {
-	var map = new google.maps.Map(document.getElementById('frontmap'), {
+	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 15,
 		center: new google.maps.LatLng(62.898997, 27.664062),
 	});
@@ -29,7 +34,7 @@ function InitializeMap()
 		title: 'Viikinkiravintola Harald'
 		});
 
-	var markerMountSherpa = new google.maps.Marker({
+	markerMountSherpa = new google.maps.Marker({
 		position: new google.maps.LatLng(62.8928034, 27.68115119),
 		map: map,
 		title: 'Mount Sherpa'
