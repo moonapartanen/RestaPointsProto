@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Kartta</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhoXq78AvYjSw-Or4_r_APriMmU_G49x0"></script>
+		<script src="scripts.js"></script>
+
+	</head>
+	<body>
+		<!--MENUBAR-->
+		<nav class="navbar navbar-default navbar-custom">
+				<div class="container">
+				<div class="navbar-header">
+					<button id="navbarbutton" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menubar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<span class="text-center"><a href="main.html"><p id="restapoints">RestaPoints</p></a></span>
+					<!--<a class="navbar-brand" href="etusivu.html"><img id="logo" src="imgs/restapointslogo.png"></img></a>-->
+				</div>
+				<div class="collapse navbar-collapse" id="menubar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a id="mblinkki" href="map.html">KARTTA</a></li>
+					<li><a id="mblinkki" href="#yhteyshenkilotlinkki">RAVINTOLAT</a></li>
+					<li><a id="mblinkki" href="#infoalinkki">KILPAILUT</a></li>
+					<li><a id="mblinkki" href="#rahoituslinkki">OMA PROFIILI</a></li>
+					</ul>
+				</div>
+				</div>
+			</nav>
+		
+		<!--TERVETULOA-PALSTA-->
+		<div class="container-fluid bg-4 text-center">	
+			<div id="map"></div>
+		</div>
+
+		<!--DRAGON SHENG - MODAALI-->
+		<div class="modal fade" id="modalDragonSheng">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body text-center" style="padding: 0px;">
+						<div class="container-fluid bg-3">
+								<h5>Dragon Sheng Kuopio</h5>
+						</div>
+								<img class="img" src="imgs/DragonSheng.jpg"></img>
+								<div class="modalcard card-block text-left">
+										<!--<h4>Yhteystiedot:</h4>
+										<p>Kuopio, Suokatu 36, Puh. 017-2626718</p>-->
+									<h4>Kiinalaista ruokaa Kuopion keskustassa.</h4>
+										<p>Dragon Sheng tarjoaa kiinalaista ruokaa Kuopion ydinkeskustassa. Valikoimastamme löytyy perinteisiä kiinalaisia liha- ja kasvisruokia. Tervetuloa!</p>
+										<hr>
+												<table class="table borderless text-left">
+															<tr>
+																<td id="tableheader">Yhteystiedot</th>
+																<td id="tableheader">Kertyneet pisteet</th>
+															</tr>
+															<tr>
+																<td>Kuopio, Suokatu 36</td>
+																<td>520 pistettä</td>
+															</tr>
+															<tr>
+																<td>Puh. 017-2626718</td>
+																<td></td>
+															</tr>
+													</table>
+										<hr>
+									<h4>Tarjoukset:</h4>
+									<p>Juuri nyt kanalautanen 5e!</p>
+									<img id="offer" class="img" src="imgs/chinesefood.jpg"></img>
+									<p>Juuri nyt nuudelit 10e!</p>
+									<img id="offer" class="img" src="imgs/chinesefood2.jpg"></img>
+									<br>
+									<hr>
+									<table class="table borderless text-left">
+												<tr>
+													<td id="tableheader">Aukioloajat</th>
+													<td id="tableheader">Lounasaika</th>
+												</tr>
+												<tr>
+													<td>Ma - Pe 10.30-21</td>
+													<td>La - Su 11.30-21</td>
+												</tr>
+												<tr>
+													<td>Ma - Pe 10.30-15</td>
+													<td>La - Su 11.30-18</td>
+												</tr>
+										</table>
+								</div>
+						<button id="returnbutton" type="button" class="btn btn-default" data-dismiss="modal">Palaa takaisin</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--MOUNT SHERPA - MODAALI-->
+		<div class="modal fade" id="modalMountSherpa">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-body text-center" style="padding: 0px;">
+							<div class="container-fluid bg-3">
+									<h5>Ravintola Mount Sherpa</h5>
+							</div>
+									<img class="img" src="imgs/MountSherpa.jpg"></img>
+									<div class="modalcard card-block text-left">
+											<!--<h4>Yhteystiedot:</h4>
+											<p>Kuopio, Suokatu 36, Puh. 017-2626718</p>-->
+										<h4>Nepalilaista ruokaa perinteiden tapaan.</h4>
+											<p>Mount Sherpa tarjoaa nepalilaista ruokaa Kuopion ydinkeskustassa. Valikoimastamme löytyy perinteisiä nepalilaisia liha- ja kasvisruokia. Tervetuloa!</p>
+											<hr>
+													<table class="table borderless text-left">
+																<tr>
+																	<td id="tableheader">Yhteystiedot</th>
+																	<td id="tableheader">Kertyneet pisteet</th>
+																</tr>
+																<tr>
+																	<td>Kuopio, Käsityökatu 25</td>
+																	<td>700 pistettä</td>
+																</tr>
+																<tr>
+																	<td>Puh. 044 719 9229</td>
+																	<td></td>
+																</tr>
+														</table>
+											<hr>
+										<h4>Tarjoukset:</h4>
+										<p>Juuri nyt Riisiä ja härkää kastikkeessa 15!</p>
+										<img id="offer" class="img" src="imgs/nepalilainenfood1.jpg"></img>
+										<br>
+										<hr>
+										<table class="table borderless text-left">
+													<tr>
+														<td id="tableheader">Aukioloajat</th>
+														<td id="tableheader">Lounasaika</th>
+													</tr>
+													<tr>
+														<td>Ma-To	15:00-21:00</td>
+														<td>Ma - Pe 11.00-15</td>
+													</tr>
+													<tr>
+														<td>Pe 11.00-15</td>
+														<td>La - Su 11.30-14</td>
+													</tr>
+											</table>
+									</div>
+							<button id="returnbutton" type="button" class="btn btn-default" data-dismiss="modal">Palaa takaisin</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<!--FOOTER-->	
+		<footer class="container-fluid bg-5 text-center">
+			<p id="footerteksti">© RestaPoints 2018 </p>
+		</footer>		
+	</body>
+</html>

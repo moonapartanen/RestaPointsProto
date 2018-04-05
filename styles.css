@@ -2,22 +2,30 @@
 p {													/* BODY, TEKSTIT, LINKIT*/
 	color: #656565;
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 17px;
+	font-size: 14px;
 }
 hr {
-	border: 1.1px solid #D1256E;
-	width: 15%;
+	border: 0.5px solid #ef2f2f;
+	width: 90%;
 }
 h6, #otsikko{
-	color: #343434;
+	color: #ef2f2f;
 	font-size: 200%;
 	font-family: 'Ubuntu', sans-serif;
 }
-#valiotsikko {
-	color: #343434;
-	font-size: 150%;
+
+h5 {
+	color: white;
+	font-size: 200%;
 	font-family: 'Ubuntu', sans-serif;
 }
+
+h4 {
+	color: #ef2f2f;
+	font-size: 19px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
 a {
 	color: #D1256E;
 	text-decoration: underline;
@@ -43,31 +51,84 @@ a:hover {
 	width: 60px;
 	height: 40px;
 }
+.img {
+	max-width: 100%;
+	max-height: 100%;
+}
+#restapoints {
+	color: #FFFFFF;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20px;
+	padding-top: 9px;
+	padding-left: 45px;
+}
+
+#qrcode, #offer {
+	max-width: 100%;
+	max-height: 100%;
+	border: 4px solid black;
+	border-radius: 7px;
+}
+.borderless td, .borderless th, .borderless tr  {
+	border: none !important;
+	
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+	padding: 1px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+#tableheader {
+	color: #ef2f2f;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+#returnbutton {
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+	background-color: #ef2f2f;
+	border: 1px solid #ef2f2f;
+	margin-bottom: 7px;
+}
+
 
 /*-------------------------------------------------------------------------------*/
 
 .bg-1 {  									        /* CONTAINERIT JA CARDIT */
 	background-color: white;
-	margin-left: 15%;
-	margin-right: 15%;
+	margin-left: 5%;
+	margin-right: 5%;
 	padding: 3%;
 }
 .bg-2 {
 	background-color: white;
 	margin-top: 4px;
 }
+.bg-3 {
+	background-color: #ef2f2f;
+	margin: 0px;
+	padding: 3px;
+}
+.bg-4 {
+	background-color: white;
+	margin: 0px;
+	padding: 0px;
+}
 .card {
 	border: 1px solid #bfbfbf;
 	padding: 5%;
 	margin: 3%;
 }
+.modalcard {
+	padding: 5%;
+	margin: 0%;
+}
 
 /*-------------------------------------------------------------------------------*/
 
 .bg-5 {  									                /* FOOTER */
-    background-color: black;
-    color: black;
-	padding-top: 2%;
+    background-color: #ef2f2f;
+	padding-top: 3%;
     padding-bottom: 2%;
 }
 #footerteksti {
@@ -84,19 +145,19 @@ a:hover {
     margin-bottom: 0;
 	font-family: Century Gothic;
     font-size: 17px;
-    letter-spacing: 5px;
+    /*letter-spacing: 5px;*/
 	margin-left: 0%;
 	margin-right: 0%;
 }
 .navbar-custom {
-    color: #FFFFFF;
-    background-color: white;
+    color: #ef2f2f;
+    background-color: #ef2f2f;
 }
 .navbar-nav li a:hover {
     color: black !important;
 }
 .navbar-nav li a {
-    color: #343434 !important;
+    color: #FFFFFF!important;
 }
 #mblinkki {
 	text-decoration: none;
@@ -104,61 +165,26 @@ a:hover {
 .navbar-brand {
 	padding: 1%;
 }
-
-/*-------------------------------------------------------------------------------*/
-
-#top-link-block.affix {	 									/* BACK-TO-TOP */
-    position: fixed; 
-    bottom: 3%;
-    right: 5%;
+/*#navbarbutton {
+	color: #ef2f2f;
 }
-#nuoli {
-	background-color: #D1256E;
- 	font-size: 25px;
-	color: white;
-	padding-right: 40%;
-	padding-left: 40%;
-	padding-top: 5%;
-	padding-bottom: 10%;
-	border-radius: 4px;
-}
+#navbarbutton:visited, #navbarbutton:active, #navbarbutton:hover, #navbarbutton:focused {
+	color: #ef2f2f;
+}*/
 
 /*-------------------------------------------------------------------------------*/
 
 																/* KARTAT */
 
-#frontmap{
+#map{
 	margin-left:auto; 
 	margin-right:auto;
-	border-radius: 7px;
-	border: 4px solid #D1256E;
-	height: 400px;
+	height: 530px;
 	width: auto;
 	max-width: 100%;
 	max-height: 100%;
 }
 
-.markerNappi {
-	border: none;
-	background-color: white;
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: bold;
-	color: #D1256E;
-}
-a#maplink{										
-	font-size: 13px;
-	color: #D1256E;
-	font-family: 'Ubuntu', sans-serif;
-}
-
-
-/*--------------------------------------------------------------------*/
-
-#meisseli {										/*YLLÄPITOSIVUN LINKKI*/
-	color: white;
- }
- 
- /*--------------------------------------------------------------------*/
  
 												/*SLOT*/
 body {
@@ -213,4 +239,6 @@ button {
 .clear {
 	clear:both;
 }
+
+
 
