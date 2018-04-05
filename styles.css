@@ -187,17 +187,17 @@ a:hover {
 
  
 												/*SLOT*/
-body {
+/*body {
 	font-family:verdana,arial;
 	padding:20px;
-}
+}*/
 .bd {
 	text-align:center;
 }
-.container {
+/*.container {
 	margin:0 auto;
 	width:266px;
-}
+}*/
 .slot-wrapper {
 	 border: 1px solid #000000;
 }
@@ -212,7 +212,7 @@ body {
 .motion {
 	background:url("imgs/reel_blur.png") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
 }
-button {
+#control {
 	display:block;
 	width:138px;
 	height:33px;
