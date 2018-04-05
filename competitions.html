@@ -7,11 +7,12 @@
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="styles.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhoXq78AvYjSw-Or4_r_APriMmU_G49x0"></script>
-		<script src="scripts.js"></script>
-
+		<script src="jquery.spritely.js"></script>
+		<script src="jquery.backgroundPosition.js"></script>
+		<script src="slot.js"></script>
 	</head>
 	<body>
 		<!--MENUBAR-->
@@ -35,11 +36,9 @@
 		  </div>
 		</nav>
 
-		<!--TERVETULOA-PALSTA-->
-		<div class="container-fluid bg-1 text-center">	
-			<h6>Kilpailu!</h6>
-			<hr>
-		<div class="container-slot">
+<div class="bd">
+	<h1>Kilpailu</h1>
+	<div class="container">
 		<div class="slot-wrapper">
 			<div id="slot1" class="slot"></div>
 			<div id="slot2" class="slot"></div>
@@ -48,7 +47,7 @@
 		</div>
 		<div id="result"></div>
 		<div><button id="control">Start</button></div>
-		</div>
+	</div>
 </div>
 		<!--FOOTER-->	
 		<footer class="container-fluid bg-5 text-center">
