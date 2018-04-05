@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Etusivu</title>
+		<title>Kilpailut</title>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="styles.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhoXq78AvYjSw-Or4_r_APriMmU_G49x0"></script>
-		<script src="scripts.js"></script>
-
+		<script src="jquery.spritely.js"></script>
+		<script src="jquery.backgroundPosition.js"></script>
+		<script src="slot.js"></script>
 	</head>
 	<body>
 		<!--MENUBAR-->
 		<nav class="navbar navbar-default navbar-custom">
 		  <div class="container">
 			<div class="navbar-header">
-			  <button id="navbarbutton" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menubar">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menubar">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
-				</button>
-				<span class="text-center"><p id="restapoints">RestaPoints</p></span>
-			  <!--<a class="navbar-brand" href="etusivu.html"><img id="logo" src="imgs/restapointslogo.png"></img></a>-->
+			  </button>
+			  <a class="navbar-brand" href="etusivu.html"><img id="logo" src="imgs/restapointslogo.png"></img></a>
 			</div>
 			<div class="collapse navbar-collapse" id="menubar">
 			  <ul class="nav navbar-nav navbar-right">
-			    <li><a id="mblinkki" href="map.html">KARTTA</a></li>
 				<li><a id="mblinkki" href="#yhteyshenkilotlinkki">RAVINTOLAT</a></li>
 				<li><a id="mblinkki" href="#infoalinkki">KILPAILUT</a></li>
 				<li><a id="mblinkki" href="#rahoituslinkki">OMA PROFIILI</a></li>
@@ -36,19 +35,31 @@
 			</div>
 		  </div>
 		</nav>
-		
-		<!--TERVETULOA-PALSTA-->
 
-		<div class="container-fluid bg-1 text-center">
-			<br>
-			<h6>Tervetuloa!</h6>
-			<p>Näytä QR- koodi maksaessasi ja kerää pisteitä!</p></br>
-			<div><img id="qrcode" class="img" src="imgs/QRCodeImage.png"></img></div>
+<div class="bd">
+	<h1>Kilpailu</h1>
+	<div class="container">
+		<div class="slot-wrapper">
+			<div id="slot1" class="slot"></div>
+			<div id="slot2" class="slot"></div>
+			<div id="slot3" class="slot"></div>
+			<div class="clear"></div>
 		</div>
-		</br></br></br></br></br></br></br></br></br>
+		<div id="result"></div>
+		<div><button id="control">Start</button></div>
+	</div>
+</div>
 		<!--FOOTER-->	
 		<footer class="container-fluid bg-5 text-center">
-			<p id="footerteksti">© Restapoints 2018</p>
+			<p id="footerteksti">©Taco Production 2016 <a href="yllapito.php"><span id="meisseli" class="glyphicon glyphicon-wrench"></span></a></p>
 		</footer>
+
+		<!--BACK-TO-UP-NUOLI-->	
+		<span id="top-link-block" class="hidden">
+			<a href="#top" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+				<i id="nuoli" aria-hidden="true">&#8593</i>
+			</a>
+		</span>
+		
 	</body>
 </html>
