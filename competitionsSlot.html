@@ -7,7 +7,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="styles.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhoXq78AvYjSw-Or4_r_APriMmU_G49x0"></script>
 		<script src="jquery.spritely.js"></script>
@@ -41,32 +42,20 @@
 			<li><a href="competitionsAchievements.html">Saavutukset</a></li>
 			<li><a href="competitionsSlot.html">Onnen Pyörä</a></li>
 		</ul>
-		<div class="bd">
-		<h1> Kilpailut</h1>
-			<p>Syö 100 kertaa RestaPoints ravintolassa</p>
-			<progress value="50" max="100">
-			</progress>
 
-			<p>Syö 5 kertaa Dragon Shengin kung pao kanaa</p>
-			<progress value="20" max="100">
-			</progress>
-
-			<p>Syö 10 annosta Haraldissa</p>
-			<progress value="80" max="100">
-			</progress>
-			<p>Syö 50 annosta Haraldissa</p>
-			<progress value="16" max="100">
-			</progress>
-			
-			<p>Syö 10 hampurilaista Ehdassa</p>
-			<progress value="0" max="100">
-			</progress>
-			<p>Tilaa 10 kahvia Houkutuksessa</p>
-			<progress value="80" max="100">
-			</progress>
-
+<div class="bd">
+	<h1>Kilpailu</h1>
+	<div class="container">
+		<div class="slot-wrapper">
+			<div id="slot1" class="slot"></div>
+			<div id="slot2" class="slot"></div>
+			<div id="slot3" class="slot"></div>
+			<div class="clear"></div>
 		</div>
-
+		<div id="result"></div>
+		<div><button id="control">Aloita</button></div>
+	</div>
+</div>
 		<!--FOOTER-->	
 		<footer class="container-fluid bg-5 text-center">
 			<p id="footerteksti">© Restapoints 2018</p>
