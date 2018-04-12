@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Etusivu</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhoXq78AvYjSw-Or4_r_APriMmU_G49x0"></script>
+		<script src="scripts.js"></script>
+
+	</head>
+	<body>
+		<!--MENUBAR-->
+		<nav class="navbar navbar-default navbar-custom">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button id="navbarbutton" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menubar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<span class="text-center"><a href="main.html"><p id="restapoints">RestaPoints</p></a></span>
+			  <!--<a class="navbar-brand" href="etusivu.html"><img id="logo" src="imgs/restapointslogo.png"></img></a>-->
+			</div>
+			<div class="collapse navbar-collapse" id="menubar">
+			  <ul class="nav navbar-nav navbar-right">
+			    <li><a id="mblinkki" href="map.html">KARTTA</a></li>
+				<li><a id="mblinkki" href="#yhteyshenkilotlinkki">RAVINTOLAT</a></li>
+				<li><a id="mblinkki" href="competitions.html">KILPAILUT</a></li>
+				<li><a id="mblinkki" href="profile.html">OMA PROFIILI</a></li>
+				<li><a id="mblinkki" href="groups.html">RESTAJENGI</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+		<ul id="tabsystem">
+			<li id="tabsystemtab"><a href="myowngroup.html">Omat Jengit</a></li>
+			<li id="tabsystemtab"><a href="groupsearch.html">Etsi Jengejä</a></li>
+			<li id="tabsystemtab"><a href="creategroup.html">Luo Jengejä</a></li>
+		</ul>
+
+		<!--TERVETULOA-PALSTA-->
+
+		<div class="container-fluid bg-1 text-center">
+			<br>
+			<h6>Etsi RestaJengejä</h6>
+			<p>Aloita kirjoittamalla Jengin nimi:</p></br>
+			<input type="text" placeholder="Search..">
+		</div>
+		</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+		<!--FOOTER-->	
+		<footer class="container-fluid bg-5 text-center">
+			<p id="footerteksti">© Restapoints 2018</p>
+		</footer>
+	</body>
+</html>

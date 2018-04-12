@@ -3,6 +3,11 @@ var markerMountSherpa;
 
 $(document).ready(function(){
 
+	$("#patonkiposse").click(function()
+	{
+		$("#patonkipossemodal").modal();
+	});
+
 	InitializeMap()
 
 	markerDragonSheng.addListener('click', function() {
@@ -57,7 +62,6 @@ function InitializeMap()
 	  	}
 	  });
 }
-
 
 
 

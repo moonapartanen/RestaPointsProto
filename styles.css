@@ -91,6 +91,14 @@ a:hover {
 	margin-bottom: 7px;
 }
 
+#patonkiposse {
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+	background-color: #ef2f2f;
+	border: 1px solid #ef2f2f;
+	margin-bottom: 7px;
+}
+
 
 /*-------------------------------------------------------------------------------*/
 
@@ -129,7 +137,8 @@ a:hover {
 .bg-5 {  									                /* FOOTER */
     background-color: #ef2f2f;
 	padding-top: 3%;
-    padding-bottom: 2%;
+	padding-bottom: 2%;
+	
 }
 #footerteksti {
 	color: white;
@@ -238,6 +247,30 @@ a:hover {
 }
 .clear {
 	clear:both;
+}
+
+#tabsystem {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+#tabsystemtab {
+    float: left;
+}
+
+#tabsystemtab a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+#tabsystemtab a:hover {
+    background-color: #111111;
 }
 
 
