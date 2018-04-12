@@ -7,28 +7,47 @@
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="styles.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhoXq78AvYjSw-Or4_r_APriMmU_G49x0"></script>
 		<script src="jquery.spritely.js"></script>
 		<script src="jquery.backgroundPosition.js"></script>
 		<script src="slot.js"></script>
-		
 		<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 50%;
+.slidecontainer {
+    width: 100%;
 }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: red;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: red;
+    cursor: pointer;
 }
 </style>
 	</head>
@@ -59,41 +78,34 @@ tr:nth-child(even) {
 			<li id="tabsystemtab"><a href="competitionsAchievements.html">Saavutukset</a></li>
 			<li id="tabsystemtab"><a href="competitionsSlot.html">KohtalonPyörä</a></li>
 		</ul>
-		<h2>RestaPoints Pistepörssi</h2>
-	<table align="center">
-	<tr>
-		<th>Nimi</th>
-		<th>RestaPoints</th>
-	</tr>
-	<tr>
-		<td>Alfreds Futterkiste</td>
-		<td>2000</td>
-	</tr>
-	<tr>
-		<td>Centro comercial Moctezuma</td>
-		<td>1900</td>
-	</tr>
-	<tr>
-		<td>Ernst Handel</td>
-		<td>1800</td>
-	</tr>
-	<tr>
-		<td>Island Trading</td>
-		<td>1795</td>
-	</tr>
-	<tr>
-		<td>Laughing Bacchus Winecellars</td>
-		<td>1750</td>
-	</tr>
-	<tr>
-		<td>Magazzini Alimentari Riuniti</td>
-		<td>1700</td>
-	</tr>
-</table>
 
+<div class="bd">
+	<h1>Kilpailu</h1>
+	
+	  <p>Panos: <span id="demo" value="demo"></span></p>
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  <br>
+  <br>
+</div>
+	<div class="container">
+		<div class="slot-wrapper">
+			<div id="slot1" class="slot"></div>
+			<div id="slot2" class="slot"></div>
+			<div id="slot3" class="slot"></div>
+			<div class="clear"></div>
+		</div>
+		<div id="result"></div>
+		<div><button id="control">Aloita</button></div>
+	</div>
+</div>
 		<!--FOOTER-->	
 		<footer class="container-fluid bg-5 text-center">
 			<p id="footerteksti">© Restapoints 2018</p>
 		</footer>
+		
+		
+		<script>
+
+</script>
 	</body>
 </html>

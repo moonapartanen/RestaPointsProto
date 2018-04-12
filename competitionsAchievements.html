@@ -8,29 +8,12 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="styles.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhoXq78AvYjSw-Or4_r_APriMmU_G49x0"></script>
 		<script src="jquery.spritely.js"></script>
 		<script src="jquery.backgroundPosition.js"></script>
 		<script src="slot.js"></script>
-		
-		<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 50%;
-}
-
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-</style>
 	</head>
 	<body>
 		<!--MENUBAR-->
@@ -59,38 +42,32 @@ tr:nth-child(even) {
 			<li id="tabsystemtab"><a href="competitionsAchievements.html">Saavutukset</a></li>
 			<li id="tabsystemtab"><a href="competitionsSlot.html">KohtalonPyörä</a></li>
 		</ul>
-		<h2>RestaPoints Pistepörssi</h2>
-	<table align="center">
-	<tr>
-		<th>Nimi</th>
-		<th>RestaPoints</th>
-	</tr>
-	<tr>
-		<td>Alfreds Futterkiste</td>
-		<td>2000</td>
-	</tr>
-	<tr>
-		<td>Centro comercial Moctezuma</td>
-		<td>1900</td>
-	</tr>
-	<tr>
-		<td>Ernst Handel</td>
-		<td>1800</td>
-	</tr>
-	<tr>
-		<td>Island Trading</td>
-		<td>1795</td>
-	</tr>
-	<tr>
-		<td>Laughing Bacchus Winecellars</td>
-		<td>1750</td>
-	</tr>
-	<tr>
-		<td>Magazzini Alimentari Riuniti</td>
-		<td>1700</td>
-	</tr>
-</table>
 
+		<div class="bd">
+		<h1> Saavutukset</h1>
+			<p>Syö 100 kertaa RestaPoints ravintolassa</p>
+			<progress value="50" max="100">
+			</progress>
+
+			<p>Syö 5 kertaa Dragon Shengin kung pao kanaa</p>
+			<progress value="20" max="100">
+			</progress>
+
+			<p>Syö 10 annosta Haraldissa</p>
+			<progress value="80" max="100">
+			</progress>
+			<p>Syö 50 annosta Haraldissa</p>
+			<progress value="16" max="100">
+			</progress>
+			
+			<p>Syö 10 hampurilaista Ehdassa</p>
+			<progress value="0" max="100">
+			</progress>
+			<p>Tilaa 10 kahvia Houkutuksessa</p>
+			<progress value="80" max="100">
+			</progress>
+
+		</div>
 		<!--FOOTER-->	
 		<footer class="container-fluid bg-5 text-center">
 			<p id="footerteksti">© Restapoints 2018</p>

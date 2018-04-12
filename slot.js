@@ -173,12 +173,14 @@ $(document).ready(function() {
     function printResult() {
         var res;
         if(win[a.pos] === win[b.pos] && win[a.pos] === win[c.pos]) {
-            res = "You Win!";
+            res = "Voitit "+output.innerHTML * 4+" pistett&auml;!";
         } else {
-            res = "You Lose";
+            res = "H&auml;visit "+output.innerHTML +" pistett&auml;!";
         }
         $('#result').html(res);
     }
+
+
 
     //create slot objects
     var a = new Slot('#slot1', 30, 1),
@@ -190,23 +192,12 @@ $(document).ready(function() {
     */
     $('#control').click(function() {
         var x;
-        if(this.innerHTML == "Start") {
-            a.start();
-            b.start();
-            c.start();
-            this.innerHTML = "Stop";
-            
-            disableControl(); //disable control until the slots reach max speed
-            
-            //check every 100ms if slots have reached max speed 
-            //if so, enable the control
-            x = window.setInterval(function() {
-                if(a.speed >= a.maxSpeed && b.speed >= b.maxSpeed && c.speed >= c.maxSpeed) {
-                    enableControl();
-                    window.clearInterval(x);
-                }
-            }, 100);
-        } else if(this.innerHTML == "Stop") {
+		console.log(this.innerHTML);
+        if(this.innerHTML == "Aloita" ) {
+		
+			ConfirmDialog('Voit pelata vain kerran p&auml;iv&auml;ss&auml;');
+
+        } else if(this.innerHTML == "Seis") {
             a.stop();
             b.stop();
             c.stop();
@@ -217,7 +208,7 @@ $(document).ready(function() {
             //check every 100ms if slots have stopped
             //if so, enable the control
             x = window.setInterval(function() {
-                if(a.speed === 0 && b.speed === 0 && c.speed === 0 && completed === 3) {
+                if(a.speed === 0 && b.speed === 0 && c.speed	 === 0 && completed === 3) {
                     enableControl();
                     window.clearInterval(x);
                     printResult();
@@ -227,7 +218,58 @@ $(document).ready(function() {
             a.reset();
             b.reset();
             c.reset();
-            this.innerHTML = "Start";
+            this.innerHTML = "Aloita";
         }
     });
+	function ConfirmDialog(message) {
+    $('<div></div>').appendTo('body')
+    .html('<div><p>'+message+'</p></div>')
+    .dialog({
+        modal: true, title: 'Varoitus', zIndex: 10000, autoOpen: true,
+        width: 'auto', resizable: false,
+		dialogClass: 'no-close slot-dialog',
+        buttons: {
+            Ok: function () {
+                // $(obj).removeAttr('onclick');                                
+                // $(obj).parents('.Parent').remove();
+
+              //  $('body').append('<h1>Confirm Dialog Result: <i>Yes</i></h1>');
+				
+				a.start();
+				b.start();
+				c.start();
+
+				document.getElementById("control").innerHTML = "Seis";
+				disableControl(); //disable control until the slots reach max speed
+            
+				//check every 100ms if slots have reached max speed 
+				//if so, enable the control
+				x = window.setInterval(function() {
+					if(a.speed >= a.maxSpeed && b.speed >= b.maxSpeed && c.speed >= c.maxSpeed) {
+						enableControl();
+						window.clearInterval(x);
+					}
+				}, 100);
+				
+                $(this).dialog("close");
+				
+            },	
+            Peruuta: function () {                                                                 
+                //$('body').append('<h1>Confirm Dialog Result: <i>No</i></h1>');
+                $(this).dialog("close");
+
+            }
+        }
+
+    });
+};
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
 });
+
+
