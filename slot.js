@@ -173,9 +173,9 @@ $(document).ready(function() {
     function printResult() {
         var res;
         if(win[a.pos] === win[b.pos] && win[a.pos] === win[c.pos]) {
-            res = "Voitit 40 pistettä!";
+            res = "Voitit "+output.innerHTML * 4+" pistett&auml;!";
         } else {
-            res = "H&auml;visit 20 pistett&auml;!";
+            res = "H&auml;visit "+output.innerHTML +" pistett&auml;!";
         }
         $('#result').html(res);
     }
@@ -263,5 +263,13 @@ $(document).ready(function() {
 
     });
 };
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
 });
+
 

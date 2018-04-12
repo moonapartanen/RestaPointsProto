@@ -243,7 +243,7 @@ a:hover {
 	clear:both;
 }
 
-ul {
+#tabsystem {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -251,11 +251,11 @@ ul {
     background-color: #333333;
 }
 
-li {
+#tabsystemtab {
     float: left;
 }
 
-li a {
+#tabsystemtab a {
     display: block;
     color: white;
     text-align: center;
@@ -263,7 +263,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+#tabsystemtab a:hover {
     background-color: #111111;
 }
 
