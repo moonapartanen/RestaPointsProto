@@ -72,7 +72,7 @@ function InitializeMap()
 		map: map,
 		title: 'Mount Sherpa'
 		});
-}	
+	
 
 
 
