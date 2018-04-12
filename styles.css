@@ -209,6 +209,8 @@ a:hover {
 }*/
 .slot-wrapper {
 	 border: 1px solid #000000;
+	 margin:0 auto;
+	 width:230px;
 }
 .slot {
 	background:url("imgs/reel_normal.png") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
@@ -228,6 +230,7 @@ a:hover {
 	margin:20px 60px;
 	font-size:16px;
 	cursor:pointer;
+	margin: 20px auto;
 }
 #result {
 	margin:20px 0;
@@ -271,6 +274,21 @@ a:hover {
 
 #tabsystemtab a:hover {
     background-color: #111111;
+}
+
+.ui-dialog.slot-dialog {
+	background: #DCDCDC;
+	border: 2px solid #280000;
+    border-radius: 0 0 8px 8px;
+	padding: 10px;
+    border-width: 8px 8px 8px 8px;	
+}
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+}
+.slot-dialog .ui-dialog-titlebar{
+background:red;
+font-size:24px;
 }
 
 

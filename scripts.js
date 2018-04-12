@@ -8,10 +8,14 @@ $(document).ready(function(){
 		$("#patonkipossemodal").modal();
 	});
 
-	InitializeMap()
+	InitializeMap();
 
 	markerDragonSheng.addListener('click', function() {
 		$("#modalDragonSheng").modal();
+	});
+  
+	markerMountSherpa.addListener('click', function() {
+		$("#modalMountSherpa").modal();
 	});
 
 	markerMountSherpa.addListener('click', function() {
@@ -63,6 +67,12 @@ function InitializeMap()
 	  });
 }
 
+	markerMountSherpa = new google.maps.Marker({
+		position: new google.maps.LatLng(62.8928034, 27.68115119),
+		map: map,
+		title: 'Mount Sherpa'
+		});
+}	
 
 
 
